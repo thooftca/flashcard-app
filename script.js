@@ -278,7 +278,7 @@ function updateUI() {
     void cardFrontEl.offsetWidth; // trigger reflow
     cardFrontEl.classList.add('animate-pop-in');
 
-    hintSpaceEl.style.display = 'flex';
+    hintSpaceEl.style.display = 'inline-flex';
     hintActionsEl.style.display = 'none';
   }
 }

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mastery Cards</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 
 <body>
@@ -57,14 +57,17 @@
       </main>
 
       <div class="controls">
-        <div id="hint-space" class="key-hint">
-          Press <span class="key">Spacebar</span> to flip card
-        </div>
+        <button id="hint-space" class="action-btn flip-btn" onclick="handleSpacebar()">
+          Flip Card <span class="key">Space</span>
+        </button>
 
-        <div id="hint-actions" class="key-hint" style="display: none;">
-          Press <span class="key">Enter</span> if you knew it
-          <span style="margin: 0 0.5rem; opacity: 0.5;">|</span>
-          Press <span class="key">&darr;</span> to review again later
+        <div id="hint-actions" style="display: none; gap: 1rem; justify-content: center;">
+          <button class="action-btn correct-btn" onclick="handleEnter()">
+            You knew it <span class="key">&#9166;</span>
+          </button>
+          <button class="action-btn wrong-btn" onclick="handleDownArrow()">
+            Review again <span class="key">&darr;</span>
+          </button>
         </div>
       </div>
     </div> <!-- End App Core -->

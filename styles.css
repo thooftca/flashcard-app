@@ -184,21 +184,69 @@ h1 {
 /* ─── Controls ───────────────────────────────────────────────────────────────── */
 .controls {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   margin-top: 2rem;
 }
 
-.key-hint {
-  display: flex;
+/* ─── Action Buttons (Flip / Correct / Wrong) ────────────────────────────── */
+.action-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background-color: #1e293b;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.5rem;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
   border: 1px solid #334155;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  letter-spacing: 0.01em;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.flip-btn {
+  background-color: #1e293b;
   color: #cbd5e1;
-  font-size: 0.9rem;
+  border-color: #475569;
+  min-width: 200px;
+}
+
+.flip-btn:hover {
+  background-color: #334155;
+  border-color: #60a5fa;
+}
+
+.correct-btn {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.35);
+  min-width: 180px;
+}
+
+.correct-btn:hover {
+  background-color: rgba(34, 197, 94, 0.22);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.25);
+}
+
+.wrong-btn {
+  background-color: rgba(248, 113, 113, 0.10);
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.3);
+  min-width: 180px;
+}
+
+.wrong-btn:hover {
+  background-color: rgba(248, 113, 113, 0.18);
+  box-shadow: 0 0 12px rgba(248, 113, 113, 0.2);
 }
 
 .key {
