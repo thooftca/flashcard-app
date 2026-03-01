@@ -1,48 +1,9 @@
-// Sample flashcard data
-
-const originalDeck = [
-  { front: '00', back: 'Ozzy Ozbourne bites a bat' }, { front: '03', back: 'Oliver Cromwell starved the irish' }, { front: '15', back: 'Albert Einstein Draws on the chalboard' }, { front: '16', back: 'Arnold Schwarzenegger Lifts weights' }, { front: '18', back: 'Adolf Hitler Does a nazi salute to nazi soldiers' }, { front: '33', back: 'Charlie Chaplin Leans on a cane' }, { front: '37', back: 'Che Guevara Does a communist revolution in cuba' }, { front: '38', back: 'Chris Hemsworth throws a hammer' }, { front: '39', back: 'Chuck Norris Roundhouse kicked ' }, { front: '40', back: 'Dara OBrien Does guest apperance on bbc panel show' }, { front: '41', back: 'David Attenborough Presents a nature show' }, { front: '42', back: 'David Beckham Scores a freekick at world cup' }, { front: '43', back: 'Daniel Craig Neutralises a russian spy' }, { front: '44', back: 'Didier Drogba Scores a header with his big forhead' }, { front: '45', back: 'Dale Earnhart Dies at Daytona 500' }, { front: '46', back: 'Dr Spence Gives talk at morning assembly' }, { front: 'stevel carrel', back: 'Santa Claus Flies a sleigh' }, { front: '', back: 'Sarah Nelson gets married in stockholm' }, { front: '', back: 'Gerry Adams shoots someone in kneecap' }, { front: '', back: 'George Clooney Robs a casino with 11 people in Las Vegas' }
-];
-
-
-// const originalDeck = [
-//   { front: 'What does CSS stand for?', back: 'Cascading Style Sheets' },
-//   { front: 'What is the keyword to define a variable in ES6 that cannot be reassigned?', back: 'const' },
-//   { front: 'Which HTML tag is used to define an internal style sheet?', back: '<style>' },
-//   { front: 'What is the output of `typeof null` in JavaScript?', back: '"object"' },
-//   { front: 'What does API stand for?', back: 'Application Programming Interface' },
-//   { front: 'In Git, what command is used to save your changes to the local repository?', back: 'git commit' },
-//   { front: 'What is the main function of a DNS server?', back: 'To translate domain names into IP addresses' }
-// ];
-
 // App State
-let deck = [...originalDeck];
+let originalDeck = [];
+let deck = [];
 let completedCards = [];
 let currentCardIndex = 0;
 let isAnswerVisible = false;
-let currentLevel = 2; // 1: Initials, 2: Actions
-
-// Mnemonic Mapping for Level 1
-const mnemonicMap = {
-  '1': 'A',
-  '2': 'B',
-  '3': 'C (K)',
-  '4': 'D',
-  '5': 'E',
-  '6': 'S',
-  '7': 'G (J)',
-  '8': 'H',
-  '9': 'N (M)',
-  '0': 'O'
-};
-
-function getInitials(numStr) {
-  const str = String(numStr).trim();
-  if (/^\d+$/.test(str)) {
-    return str.split('').map(d => mnemonicMap[d] || d).join(' - ');
-  }
-  return '(Not a number)';
-}
 
 // DOM Elements
 const cardFrontEl = document.getElementById('card-front');
@@ -56,14 +17,91 @@ const hintSpaceEl = document.getElementById('hint-space');
 const hintActionsEl = document.getElementById('hint-actions');
 const completionScreenEl = document.getElementById('completion-screen');
 const restartBtnEl = document.getElementById('restart-btn');
-const btnLevel1 = document.getElementById('btn-level-1');
-const btnLevel2 = document.getElementById('btn-level-2');
 
-// Initialize app
-function init() {
-  resetState();
-  updateUI();
+// New DOM Elements for Deck Selection
+const deckSelectionEl = document.getElementById('deck-selection');
+const deckListEl = document.getElementById('deck-list');
+const appCoreEl = document.getElementById('app-core');
+const progressContainerEl = document.getElementById('progress-container');
+const statsContainerEl = document.getElementById('stats-container');
+const btnBackToDecks = document.getElementById('btn-back-to-decks');
+
+// Initialize app: Fetch manifest instead of starting game immediately
+async function init() {
   setupEventListeners();
+
+  try {
+    const response = await fetch('decks/manifest.json');
+    if (!response.ok) throw new Error('Could not fetch manifest');
+    const decks = await response.json();
+    renderDeckMenu(decks);
+  } catch (error) {
+    deckListEl.innerHTML = `<p style="color:#ef4444;">Error loading decks: ${error.message}</p>
+    <p style="color:#94a3b8; font-size:0.9rem; margin-top:1rem;">Note: If viewing locally via file://, CORS might block loading files. Consider using a local server (like python -m http.server).</p>`;
+  }
+}
+
+function renderDeckMenu(decks) {
+  deckListEl.innerHTML = ''; // clear loading message
+  if (decks.length === 0) {
+    deckListEl.innerHTML = `<p style="color:#94a3b8;">No decks found.</p>`;
+    return;
+  }
+
+  decks.forEach(deckFilename => {
+    const btn = document.createElement('button');
+    btn.className = 'deck-item';
+    // Remove extension for display name
+    btn.textContent = deckFilename.replace(/\.[^/.]+$/, "");
+    btn.addEventListener('click', () => loadDeck(deckFilename));
+    deckListEl.appendChild(btn);
+  });
+}
+
+async function loadDeck(filename) {
+  try {
+    deckSelectionEl.style.display = 'none';
+    appCoreEl.style.display = 'block';
+    progressContainerEl.style.display = 'block';
+    statsContainerEl.style.display = 'flex';
+
+    // Show a loading state on the card
+    cardFrontContentEl.textContent = "Loading deck...";
+    cardBackContentEl.textContent = "";
+
+    const response = await fetch(`decks/${filename}`);
+    if (!response.ok) throw new Error('Could not fetch deck file');
+    const textData = await response.text();
+
+    // Parse the text data (number   text)
+    originalDeck = [];
+    const lines = textData.split('\n');
+    for (const line of lines) {
+      if (!line.trim()) continue; // skip empty lines
+
+      // Match strictly on a tab character.
+      // e.g. "Front with spaces\tBackside text" -> front: "Front with spaces", back: "Backside text"
+      // Split by the first tab
+      const firstTabIdx = line.indexOf('\t');
+      if (firstTabIdx !== -1) {
+        const front = line.substring(0, firstTabIdx).trim();
+        const back = line.substring(firstTabIdx + 1).trim();
+        originalDeck.push({ front, back });
+      }
+    }
+
+    if (originalDeck.length === 0) {
+      throw new Error("No valid cards found in this file.");
+    }
+
+    resetState();
+    updateUI();
+
+  } catch (error) {
+    cardFrontContentEl.textContent = `Error: ${error.message}`;
+    originalDeck = [];
+    deck = [];
+  }
 }
 
 function resetState() {
@@ -83,12 +121,7 @@ function updateUI() {
 
   const currentCard = deck[currentCardIndex];
   cardFrontContentEl.textContent = currentCard.front;
-
-  if (currentLevel === 1) {
-    cardBackContentEl.textContent = getInitials(currentCard.front);
-  } else {
-    cardBackContentEl.textContent = currentCard.back;
-  }
+  cardBackContentEl.textContent = currentCard.back;
 
   // Update stats
   const totalCards = originalDeck.length;
@@ -188,19 +221,19 @@ function setupEventListeners() {
     updateUI();
   });
 
-  // Level selector clicks
-  btnLevel1.addEventListener('click', () => {
-    currentLevel = 1;
-    btnLevel1.classList.add('active');
-    btnLevel2.classList.remove('active');
-    updateUI();
-  });
+  // Back to Deck Selection
+  btnBackToDecks.addEventListener('click', () => {
+    // Hide App Core, Show Selection Menu
+    appCoreEl.style.display = 'none';
+    progressContainerEl.style.display = 'none';
+    statsContainerEl.style.display = 'none';
+    deckSelectionEl.style.display = 'block';
+    // Hide completion screen if it was visible
+    completionScreenEl.classList.remove('visible');
 
-  btnLevel2.addEventListener('click', () => {
-    currentLevel = 2;
-    btnLevel2.classList.add('active');
-    btnLevel1.classList.remove('active');
-    updateUI();
+    // Reset deck arrays so keyboard shortcuts do nothing while in menu
+    originalDeck = [];
+    deck = [];
   });
 }
 

@@ -1,0 +1,80 @@
+maken (perfect)	gemaakt
+wonen (perfect)	gewoond
+weken (perfect)	geweekt
+dansen (perfect)	gedanst
+geven (perfect)	gegeven
+lopen (perfect)	gelopen
+wandelen (perfect)	gewandeld
+eten (perfect)	gegeten
+doen (perfect)	gedaan
+zwemmen (perfect)	gezwommen
+zien (perfect)	gezien
+komen (perfect)	gekomen
+blijven (perfect)	gebleven
+worden (perfect)	geworden
+beginnen (perfect)	begonnen
+slapen (perfect)	geslapen
+bellen (perfect)	gebeld
+schrijven (perfect)	geschreven
+vragen (perfect)	gevraagd
+antwoorden (perfect)	geantwoord
+gaan (perfect)	gegaan
+zingen (perfect)	gezongen
+rijden (perfect)	gereden
+hebben (perfect)	gehad
+vinden (perfect)	gevonden
+spelen (perfect)	gespeeld
+dineren (perfect)	gedineerd
+drinken (perfect)	gedronken
+kijken (perfect)	gekeken
+bewonderen (perfect)	bewonderd
+bezoeken (perfect)	bezocht
+kopen (perfect)	gekocht
+ruilen (perfect)	geruild
+betalen (perfect)	betaald
+verdienen (perfect)	verdiend
+willen (perfect)	gewild
+vertellen (perfect)	verteld
+reizen (perfect)	gereisd
+lezen (perfect)	gelezen
+sporten (perfect)	gesport
+maken (imperfect)	(hebben) maakte
+wonen (imperfect)	(hebben) woonde
+weken (imperfect)	(hebben) weekte
+dansen (imperfect)	(hebben) danste
+geven (imperfect)	(hebben) gaf
+lopen (imperfect)	(hebben) liep
+wandelen (imperfect)	(hebben) wandelde
+eten (imperfect)	(hebben) at
+doen (imperfect)	(hebben) deed
+zwemmen (imperfect)	(hebben) zwom
+zien (imperfect)	(hebben) zag
+komen (imperfect)	(zijn) kwam
+blijven (imperfect)	(zijn) bleef
+worden (imperfect)	(zijn) werd
+beginnen (imperfect)	(zijn) begon
+slapen (imperfect)	(hebben) sliep
+bellen (imperfect)	(hebben) belde
+schrijven (imperfect)	(hebben) schreef
+vragen (imperfect)	(hebben) vroeg
+antwoorden (imperfect)	(hebben) antwoordde
+gaan (imperfect)	(zijn) ging
+zingen (imperfect)	(hebben) zong
+rijden (imperfect)	(hebben) reed
+hebben (imperfect)	(hebben) had
+vinden (imperfect)	(hebben) vond
+spelen (imperfect)	(hebben) speelde
+dineren (imperfect)	(hebben) dineerde
+drinken (imperfect)	(hebben) dronk
+kijken (imperfect)	(hebben) keek
+bewonderen (imperfect)	(hebben) bewonderde
+bezoeken (imperfect)	(hebben) bezocht
+kopen (imperfect)	(hebben) kocht
+ruilen (imperfect)	(hebben) ruilde
+betalen (imperfect)	(hebben) betaalde
+verdienen (imperfect)	(hebben) verdiende
+willen (imperfect)	(hebben) wilde
+vertellen (imperfect)	(hebben) vertelde
+reizen (imperfect)	(hebben) reisde
+lezen (imperfect)	(hebben) las
+sporten (imperfect)	(hebben) sportte
