@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastery Cards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+    <header>
+      <h1>Mastery Cards</h1>
+      <div class="level-selector" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+        <button id="btn-level-1" class="btn level-btn">Level 1 (Initials)</button>
+        <button id="btn-level-2" class="btn level-btn active">Level 2 (Actions)</button>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="stats">
+        <span id="progress-text">0 / 0 Mastered</span>
+        <span id="remaining-text">0 remaining</span>
+      </div>
+    </header>
+
+    <main class="flashcard-area">
+      <!-- Front (Question) -->
+      <div class="card front" id="card-front">
+        <div class="card-label">Question</div>
+        <div class="card-content" id="card-front-content">
+          Loading...
+        </div>
+      </div>
+
+      <!-- Back (Answer) -->
+      <div class="card back hidden" id="card-back">
+        <div class="card-label">Answer</div>
+        <div class="card-content" id="card-back-content">
+          Loading...
+        </div>
+      </div>
+    </main>
+
+    <div class="controls">
+      <div id="hint-space" class="key-hint">
+        Press <span class="key">Spacebar</span> to flip card
+      </div>
+
+      <div id="hint-actions" class="key-hint" style="display: none;">
+        Press <span class="key">Enter</span> if you knew it
+        <span style="margin: 0 0.5rem; opacity: 0.5;">|</span>
+        Press <span class="key">&darr;</span> to review again later
+      </div>
+    </div>
+  </div>
+
+  <div class="completion-screen" id="completion-screen">
+    <div class="completion-icon">🎉</div>
+    <h2>Deck Conquered!</h2>
+    <p style="margin-bottom: 2rem; color: #94a3b8; font-size: 1.1rem;">You have successfully mastered all cards in this
+      deck.</p>
+    <button class="btn" id="restart-btn">Study Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
