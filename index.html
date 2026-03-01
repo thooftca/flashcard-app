@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mastery Cards</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 
 <body>
 
   <div class="app-container">
     <header>
-      <h1>Mastery Cards</h1>
-      <div class="progress-container" id="progress-container" style="display: none;">
-        <div class="progress-bar" id="progress-bar"></div>
+      <div class="header-row">
+        <h1>Mastery Cards</h1>
+        <div class="score-chip" id="score-chip" style="display: none;">0 / 0</div>
       </div>
-      <div class="stats" id="stats-container" style="display: none;">
-        <span id="progress-text">0 / 0 Mastered</span>
-        <span id="remaining-text">0 remaining</span>
+      <div class="streak-bar-container" id="streak-bar-container" style="display: none;">
+        <div class="streak-bar" id="streak-bar"></div>
+        <div class="streak-labels" id="streak-labels"></div>
       </div>
     </header>
 
@@ -72,9 +72,11 @@
 
   <div class="completion-screen" id="completion-screen">
     <div class="completion-icon">🎉</div>
-    <h2>Deck Conquered!</h2>
-    <p style="margin-bottom: 2rem; color: #94a3b8; font-size: 1.1rem;">You have successfully mastered all cards in this
-      deck.</p>
+    <h2>All Done!</h2>
+    <p id="completion-msg"
+      style="margin-bottom: 2rem; color: #94a3b8; font-size: 1.1rem; text-align: center; max-width: 400px;">
+      You have successfully mastered all cards in this deck.
+    </p>
     <button class="btn" id="restart-btn">Study Again</button>
   </div>
 

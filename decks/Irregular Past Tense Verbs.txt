@@ -1,80 +1,80 @@
-maken (perfect)	gemaakt
-wonen (perfect)	gewoond
-weken (perfect)	geweekt
-dansen (perfect)	gedanst
-geven (perfect)	gegeven
-lopen (perfect)	gelopen
-wandelen (perfect)	gewandeld
-eten (perfect)	gegeten
-doen (perfect)	gedaan
-zwemmen (perfect)	gezwommen
-zien (perfect)	gezien
-komen (perfect)	gekomen
-blijven (perfect)	gebleven
-worden (perfect)	geworden
-beginnen (perfect)	begonnen
-slapen (perfect)	geslapen
-bellen (perfect)	gebeld
-schrijven (perfect)	geschreven
-vragen (perfect)	gevraagd
-antwoorden (perfect)	geantwoord
-gaan (perfect)	gegaan
-zingen (perfect)	gezongen
-rijden (perfect)	gereden
-hebben (perfect)	gehad
-vinden (perfect)	gevonden
-spelen (perfect)	gespeeld
-dineren (perfect)	gedineerd
-drinken (perfect)	gedronken
-kijken (perfect)	gekeken
-bewonderen (perfect)	bewonderd
-bezoeken (perfect)	bezocht
-kopen (perfect)	gekocht
-ruilen (perfect)	geruild
-betalen (perfect)	betaald
-verdienen (perfect)	verdiend
-willen (perfect)	gewild
-vertellen (perfect)	verteld
-reizen (perfect)	gereisd
-lezen (perfect)	gelezen
-sporten (perfect)	gesport
-maken (imperfect)	(hebben) maakte
-wonen (imperfect)	(hebben) woonde
-weken (imperfect)	(hebben) weekte
-dansen (imperfect)	(hebben) danste
-geven (imperfect)	(hebben) gaf
-lopen (imperfect)	(hebben) liep
-wandelen (imperfect)	(hebben) wandelde
-eten (imperfect)	(hebben) at
-doen (imperfect)	(hebben) deed
-zwemmen (imperfect)	(hebben) zwom
-zien (imperfect)	(hebben) zag
-komen (imperfect)	(zijn) kwam
-blijven (imperfect)	(zijn) bleef
-worden (imperfect)	(zijn) werd
-beginnen (imperfect)	(zijn) begon
-slapen (imperfect)	(hebben) sliep
-bellen (imperfect)	(hebben) belde
-schrijven (imperfect)	(hebben) schreef
-vragen (imperfect)	(hebben) vroeg
-antwoorden (imperfect)	(hebben) antwoordde
-gaan (imperfect)	(zijn) ging
-zingen (imperfect)	(hebben) zong
-rijden (imperfect)	(hebben) reed
-hebben (imperfect)	(hebben) had
-vinden (imperfect)	(hebben) vond
-spelen (imperfect)	(hebben) speelde
-dineren (imperfect)	(hebben) dineerde
-drinken (imperfect)	(hebben) dronk
-kijken (imperfect)	(hebben) keek
-bewonderen (imperfect)	(hebben) bewonderde
-bezoeken (imperfect)	(hebben) bezocht
-kopen (imperfect)	(hebben) kocht
-ruilen (imperfect)	(hebben) ruilde
-betalen (imperfect)	(hebben) betaalde
-verdienen (imperfect)	(hebben) verdiende
-willen (imperfect)	(hebben) wilde
-vertellen (imperfect)	(hebben) vertelde
-reizen (imperfect)	(hebben) reisde
-lezen (imperfect)	(hebben) las
-sporten (imperfect)	(hebben) sportte
+03001	maken (perfect)	gemaakt
+03002	wonen (perfect)	gewoond
+03004	weken (perfect)	geweekt
+03004	dansen (perfect)	gedanst
+03005	geven (perfect)	gegeven
+03006	lopen (perfect)	gelopen
+03007	wandelen (perfect)	gewandeld
+03008	eten (perfect)	gegeten
+03009	doen (perfect)	gedaan
+03010	zwemmen (perfect)	gezwommen
+03011	zien (perfect)	gezien
+03012	komen (perfect)	gekomen
+03013	blijven (perfect)	gebleven
+03014	worden (perfect)	geworden
+03015	beginnen (perfect)	begonnen
+03016	slapen (perfect)	geslapen
+03017	bellen (perfect)	gebeld
+03018	schrijven (perfect)	geschreven
+03019	vragen (perfect)	gevraagd
+03020	antwoorden (perfect)	geantwoord
+03021	gaan (perfect)	gegaan
+03022	zingen (perfect)	gezongen
+03023	rijden (perfect)	gereden
+03024	hebben (perfect)	gehad
+03025	vinden (perfect)	gevonden
+03026	spelen (perfect)	gespeeld
+03027	dineren (perfect)	gedineerd
+03028	drinken (perfect)	gedronken
+03029	kijken (perfect)	gekeken
+03030	bewonderen (perfect)	bewonderd
+03031	bezoeken (perfect)	bezocht
+03032	kopen (perfect)	gekocht
+03033	ruilen (perfect)	geruild
+03034	betalen (perfect)	betaald
+03035	verdienen (perfect)	verdiend
+03036	willen (perfect)	gewild
+03037	vertellen (perfect)	verteld
+03038	reizen (perfect)	gereisd
+03039	lezen (perfect)	gelezen
+03040	sporten (perfect)	gesport
+03041	maken (imperfect)	(hebben) maakte
+03042	wonen (imperfect)	(hebben) woonde
+03043	weken (imperfect)	(hebben) weekte
+03044	dansen (imperfect)	(hebben) danste
+03045	geven (imperfect)	(hebben) gaf
+03046	lopen (imperfect)	(hebben) liep
+03047	wandelen (imperfect)	(hebben) wandelde
+03048	eten (imperfect)	(hebben) at
+03049	doen (imperfect)	(hebben) deed
+03050	zwemmen (imperfect)	(hebben) zwom
+03051	zien (imperfect)	(hebben) zag
+03052	komen (imperfect)	(zijn) kwam
+03053	blijven (imperfect)	(zijn) bleef
+03054	worden (imperfect)	(zijn) werd
+03055	beginnen (imperfect)	(zijn) begon
+03056	slapen (imperfect)	(hebben) sliep
+03057	bellen (imperfect)	(hebben) belde
+03058	schrijven (imperfect)	(hebben) schreef
+03059	vragen (imperfect)	(hebben) vroeg
+03060	antwoorden (imperfect)	(hebben) antwoordde
+03061	gaan (imperfect)	(zijn) ging
+03062	zingen (imperfect)	(hebben) zong
+03063	rijden (imperfect)	(hebben) reed
+03064	hebben (imperfect)	(hebben) had
+03065	vinden (imperfect)	(hebben) vond
+03066	spelen (imperfect)	(hebben) speelde
+03067	dineren (imperfect)	(hebben) dineerde
+03068	drinken (imperfect)	(hebben) dronk
+03069	kijken (imperfect)	(hebben) keek
+03070	bewonderen (imperfect)	(hebben) bewonderde
+03071	bezoeken (imperfect)	(hebben) bezocht
+03072	kopen (imperfect)	(hebben) kocht
+03073	ruilen (imperfect)	(hebben) ruilde
+03074	betalen (imperfect)	(hebben) betaalde
+03075	verdienen (imperfect)	(hebben) verdiende
+03076	willen (imperfect)	(hebben) wilde
+03077	vertellen (imperfect)	(hebben) vertelde
+03078	reizen (imperfect)	(hebben) reisde
+03079	lezen (imperfect)	(hebben) las
+03080	sporten (imperfect)	(hebben) sportte
