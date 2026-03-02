@@ -1,0 +1,130 @@
+04000	de vergadering	the meeting
+04001	de agenda	the agenda
+04002	het verslag	the report (minutes/report)
+04003	de notulen	the minutes
+04004	de presentatie	the presentation
+04005	de planning	the planning/schedule
+04006	de deadline	the deadline
+04007	de afspraak	the appointment/arrangement
+04008	de taak	the task
+04009	het project	the project
+04010	de samenwerking	the collaboration
+04011	de afdeling	the department
+04012	de leidinggevende	the supervisor/manager
+04013	de collega	the colleague
+04014	de klant	the client/customer
+04015	de leverancier	the supplier
+04016	de overeenkomst	the agreement/contract
+04017	de onderhandeling	the negotiation
+04018	de beslissing	the decision
+04019	de verantwoordelijkheid	the responsibility
+04020	de doelstelling	the objective/goal
+04021	de strategie	the strategy
+04022	de winst	the profit
+04023	het verlies	the loss
+04024	de omzet	the revenue/turnover
+04025	de kosten	the costs
+04026	de begroting	the budget
+04027	de investering	the investment
+04028	de groei	the growth
+04029	de concurrent	the competitor
+04030	bespreken	to discuss
+04031	plannen	to plan
+04032	organiseren	to organize
+04033	voorbereiden	to prepare
+04034	uitleggen	to explain
+04035	voorstellen	to propose
+04036	beslissen	to decide
+04037	akkoord gaan (met)	to agree (with)
+04038	afspreken	to agree/arrange
+04039	regelen	to arrange
+04040	controleren	to check
+04041	verbeteren	to improve
+04042	veranderen	to change
+04043	ontwikkelen	to develop
+04044	ondersteunen	to support
+04045	bereiken	to achieve
+04046	onderhandelen	to negotiate
+04047	vergelijken	to compare
+04048	leveren	to deliver/supply
+04049	bevestigen	to confirm
+04050	belangrijk	important
+04051	duidelijk	clear
+04052	beschikbaar	available
+04053	verantwoordelijk	responsible
+04054	efficiënt	efficient
+04055	succesvol	successful
+04056	intern	intern(al)
+04057	extern	external
+04058	dringend	urgent
+04059	volledig	complete
+04060	tijdelijk	temporary
+04061	vast	permanent
+04062	gemiddeld	average
+04063	flexibel	flexible
+04064	betrouwbaar	reliable
+04065	the meeting	de vergadering
+04066	the agenda	de agenda
+04067	the report (minutes/report)	het verslag
+04068	the minutes	de notulen
+04069	the presentation	de presentatie
+04070	the planning/schedule	de planning
+04071	the deadline	de deadline
+04072	the appointment/arrangement	de afspraak
+04073	the task	de taak
+04074	the project	het project
+04075	the collaboration	de samenwerking
+04076	the department	de afdeling
+04077	the supervisor/manager	de leidinggevende
+04078	the colleague	de collega
+04079	the client/customer	de klant
+04080	the supplier	de leverancier
+04081	the agreement/contract	de overeenkomst
+04082	the negotiation	de onderhandeling
+04083	the decision	de beslissing
+04084	the responsibility	de verantwoordelijkheid
+04085	the objective/goal	de doelstelling
+04086	the strategy	de strategie
+04087	the profit	de winst
+04088	the loss	het verlies
+04089	the revenue/turnover	de omzet
+04090	the costs	de kosten
+04091	the budget	de begroting
+04092	the investment	de investering
+04093	the growth	de groei
+04094	the competitor	de concurrent
+04095	to discuss	bespreken
+04096	to plan	plannen
+04097	to organize	organiseren
+04098	to prepare	voorbereiden
+04099	to explain	uitleggen
+04100	to propose	voorstellen
+04101	to decide	beslissen
+04102	to agree (with)	akkoord gaan (met)
+04103	to agree/arrange	afspreken
+04104	to arrange	regelen
+04105	to check	controleren
+04106	to improve	verbeteren
+04107	to change	veranderen
+04108	to develop	ontwikkelen
+04109	to support	ondersteunen
+04110	to achieve	bereiken
+04111	to negotiate	onderhandelen
+04112	to compare	vergelijken
+04113	to deliver/supply	leveren
+04114	to confirm	bevestigen
+04115	important	belangrijk
+04116	clear	duidelijk
+04117	available	beschikbaar
+04118	responsible	verantwoordelijk
+04119	efficient	efficiënt
+04120	successful	succesvol
+04121	intern(al)	intern
+04122	external	extern
+04123	urgent	dringend
+04124	complete	volledig
+04125	temporary	tijdelijk
+04126	permanent	vast
+04127	average	gemiddeld
+04128	flexible	flexibel
+04129	reliable	betrouwbaar
